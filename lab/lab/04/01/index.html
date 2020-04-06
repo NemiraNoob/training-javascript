@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+</head>
+
+<body onload="initForm()">
+
+    <h2>Lab 04/01</h2>
+    <form id="carForm">
+        <fieldset id="fieldset1">
+            <legend>Etape 1 : Choisissez une marque</legend>
+            <select id="makeSelect"></select>
+        </fieldset>
+
+        <fieldset id="fieldset2">
+            <legend>Etape 2 : Choisissez un modèle</legend>
+            <select id="modelSelect"></select>
+        </fieldset>
+
+        <fieldset id="fieldset3">
+            <legend>Etape 3 : Choisissez une couleur</legend>
+            <select id="colorSelect"></select>
+        </fieldset>
+
+        <fieldset id="fieldset4">
+            <legend>Etape 4 : Choisissez une option</legend>
+            <label for="clim">Climatisation</label>
+            <input id="clim" name="options" type="checkbox" value="Climatisation">
+
+            <label for="elec">Sièges électriques</label>
+            <input id="elec" name="options" type="checkbox" value="Sièges électriques">
+
+            <label for="gps">GPS</label>
+            <input id="gps" name="options" type="checkbox" value="GPS">
+        </fieldset>
+
+    </form>
+
+    <button id="buttonBuy">Acheter sans me poser de question ni regret !</button>
+
+    <p></p>
+
+    <fieldset id="resultDiv">
+        <p>Bravo, vous avez acheté une :</p>
+        <p id="makeResult "></p>
+        <p id="modelResult "></p>
+        <p id="colorResult "></p>
+        <p id="optionsResult "></p>
+    </fieldset>
+
+    <script type="text/javascript" src="formulaire.js"></script>
+</body>
+
+</html>
