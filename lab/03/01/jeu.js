@@ -64,7 +64,7 @@ function play() {
     else if((secondJoueur.positionX == 100) && (secondJoueur.positionY == 100)){
         console.log("Le jeu est terminé, et le gagnant se trouve être : " + secondJoueur.nom+ " ! Et il a gagné en " + secondJoueur.compteur + " coups !");
     }
-    else if((premierJoueur.positionX == 100) && (premierJoueur.positionY == 100)){
+    else if((troisiemeJoueur.positionX == 100) && (troisiemeJoueur.positionY == 100)){
         console.log("Le jeu est terminé, et le gagnant se trouve être : " + troisiemeJoueur.nom + " ! Et il a gagné en " + troisiemeJoueur.compteur + " coups !");
     }
 
