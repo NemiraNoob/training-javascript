@@ -4,7 +4,7 @@ function displayBooleanTrue() {
 }
 
 function displayName() {
-    console.log('Neminoob vous saloue !')
+    console.log('Neminoob vous saloue !');
 }
 
 function displayNameUppercase() {
