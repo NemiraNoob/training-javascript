@@ -1,17 +1,25 @@
 class LabError extends Error {
-    message(){
-        super.message();
-        console.log('teeeeeeeeesertgfdzef');
-    }
+    constructor(message) {
+        super(message); // (1)
+        this.name = "L'erreur est affichée en pop-up !"; // (2)
+      }
 }
 
-function callSum(a, b){
+function sum(a, b){
     if(isNaN(a+b)){
-        let err = new LabError();
-        err.message;
+        throw new LabError("Le résultat est NaN, c'est triste !");
     }
 
     else{
         console.log(a + b);
     }
+}
+
+function callSum(a, b){
+    try {
+        sum(a, b);
+    } catch(err){
+        console.log(`Oh, non ! Une erreur : ${err.name}`);
+        alert(`Oh, non ! Un erreur : ${err.message}`);
+    } 
 }
