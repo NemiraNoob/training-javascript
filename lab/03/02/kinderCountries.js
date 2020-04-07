@@ -730,7 +730,16 @@ const countries = [{
 }];
 
 function getCountryByCode(codeA){
-    console.log(countries.find(item => item.code == codeA));
+    let preuve = 0;
+
+    if(console.log(countries.find(item => item.code == codeA))){
+        preuve = 1;
+    }
+    else{
+        if(preuve == 0){
+            console.log("Bon bah, vous avez tapé un mauvais code, écoutez ! Tant pis pour vous.");
+        }
+    }
 }
 
 function getCountryNameLongerThen(longueur){
