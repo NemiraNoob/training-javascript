@@ -12,12 +12,12 @@
     <form id="carForm">
         <fieldset id="fieldset1">
             <legend>Etape 1 : Choisissez une marque</legend>
-            <select id="makeSelect"></select>
+            <select id="makeSelect" onchange="models()"></select>
         </fieldset>
 
         <fieldset id="fieldset2">
             <legend>Etape 2 : Choisissez un modèle</legend>
-            <select id="modelSelect"></select>
+            <select id="modelSelect" onchange="couleur()"></select>
         </fieldset>
 
         <fieldset id="fieldset3">
@@ -39,16 +39,16 @@
 
     </form>
 
-    <button id="buttonBuy">Acheter sans me poser de question ni regret !</button>
+    <button id="buttonBuy" onclick="resultat()">Acheter sans me poser de question ni regret !</button>
 
     <p></p>
 
     <fieldset id="resultDiv">
         <p>Bravo, vous avez acheté une :</p>
-        <p id="makeResult "></p>
-        <p id="modelResult "></p>
-        <p id="colorResult "></p>
-        <p id="optionsResult "></p>
+        <p id="makeResult"></p>
+        <p id="modelResult"></p>
+        <p id="colorResult"></p>
+        <p id="optionsResult"></p>
     </fieldset>
 
     <script type="text/javascript" src="formulaire.js"></script>

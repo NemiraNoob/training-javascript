@@ -57,14 +57,14 @@ var troisiemeJoueur = Object.create(Joueur);
 troisiemeJoueur.nom = "Azdanyoff";
 troisiemeJoueur.afficherNom();
 
-function play() {
-    if((premierJoueur.positionX == 100) && (premierJoueur.positionY == 100)){
+/*function play() {
+    if((premierJoueur.positionX === 100) && (premierJoueur.positionY === 100)){
         console.log("Le jeu est terminé, et le gagnant se trouve être : " + premierJoueur.nom + " ! Et il a gagné en " + premierJoueur.compteur + " coups !");
     }
-    else if((secondJoueur.positionX == 100) && (secondJoueur.positionY == 100)){
+    else if((secondJoueur.positionX === 100) && (secondJoueur.positionY === 100)){
         console.log("Le jeu est terminé, et le gagnant se trouve être : " + secondJoueur.nom+ " ! Et il a gagné en " + secondJoueur.compteur + " coups !");
     }
-    else if((troisiemeJoueur.positionX == 100) && (troisiemeJoueur.positionY == 100)){
+    else if((troisiemeJoueur.positionX === 100) && (troisiemeJoueur.positionY === 100)){
         console.log("Le jeu est terminé, et le gagnant se trouve être : " + troisiemeJoueur.nom + " ! Et il a gagné en " + troisiemeJoueur.compteur + " coups !");
     }
 
@@ -76,4 +76,54 @@ function play() {
         troisiemeJoueur.seDeplace();
         troisiemeJoueur.compteur = troisiemeJoueur.compteur + 1;
     }
-}
+}*/
+
+/*function play(){
+    if((premierJoueur.positionX === 100) && (premierJoueur.positionY === 100)){
+        console.log("Le jeu est terminé, et le gagnant se trouve être : " + premierJoueur.nom + " ! Et il a gagné en " + premierJoueur.compteur + " coups !");
+    }
+    else if((secondJoueur.positionX === 100) && (secondJoueur.positionY === 100)){
+        console.log("Le jeu est terminé, et le gagnant se trouve être : " + secondJoueur.nom+ " ! Et il a gagné en " + secondJoueur.compteur + " coups !");
+    }
+    else if((troisiemeJoueur.positionX === 100) && (troisiemeJoueur.positionY === 100)){
+        console.log("Le jeu est terminé, et le gagnant se trouve être : " + troisiemeJoueur.nom + " ! Et il a gagné en " + troisiemeJoueur.compteur + " coups !");
+    }
+    else{
+        while( ((premierJoueur.positionX !== 100) && (premierJoueur.positionY !== 100)) || ((secondJoueur.positionX !== 100) && (secondJoueur.positionY !== 100)) || ((troisiemeJoueur.positionX !== 100) && (troisiemeJoueur.positionY !== 100)) ){
+            premierJoueur.seDeplace();
+            premierJoueur.compteur = premierJoueur.compteur + 1;
+            secondJoueur.seDeplace();
+            secondJoueur.compteur = secondJoueur.compteur + 1;
+            troisiemeJoueur.seDeplace();
+            troisiemeJoueur.compteur = troisiemeJoueur.compteur + 1;
+        }
+    }
+}*/
+
+function play() {
+    var boucle = setInterval(execute, 1500);
+
+    function execute() {
+        if((premierJoueur.positionX === 100) && (premierJoueur.positionY === 100)){
+            clearInterval(boucle);
+            console.log("Le jeu est terminé, et le gagnant se trouve être : " + premierJoueur.nom + " ! Et il a gagné en " + premierJoueur.compteur + " coups !");
+        }
+        else if((secondJoueur.positionX === 100) && (secondJoueur.positionY === 100)){
+            clearInterval(boucle);
+            console.log("Le jeu est terminé, et le gagnant se trouve être : " + secondJoueur.nom+ " ! Et il a gagné en " + secondJoueur.compteur + " coups !");
+        }
+        else if((troisiemeJoueur.positionX === 100) && (troisiemeJoueur.positionY === 100)){
+            clearInterval(boucle);
+            console.log("Le jeu est terminé, et le gagnant se trouve être : " + troisiemeJoueur.nom + " ! Et il a gagné en " + troisiemeJoueur.compteur + " coups !");
+        }
+
+        else{
+            premierJoueur.seDeplace();
+            premierJoueur.compteur = premierJoueur.compteur + 1;
+            secondJoueur.seDeplace();
+            secondJoueur.compteur = secondJoueur.compteur + 1;
+            troisiemeJoueur.seDeplace();
+            troisiemeJoueur.compteur = troisiemeJoueur.compteur + 1;
+        }
+    }
+  }
